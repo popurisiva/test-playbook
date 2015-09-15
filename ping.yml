@@ -1,0 +1,6 @@
+- hosts: all
+  connection: local
+  gather_facts: True
+  tasks:
+    - name: Print OS Name 
+      shell: "uname -a"
