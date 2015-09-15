@@ -1,0 +1,15 @@
+---
+- name: modify clc server
+  hosts: all
+  gather_facts: False
+  connection: ssh
+  tasks:
+    - name: Modify Server at CLC
+      clc_modify_server:
+        server_ids:
+            - UC1WFADJH22
+        cpu: 1
+        memory: 4
+        wait: True
+        state: present
+      register: clc
