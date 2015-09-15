@@ -7,7 +7,7 @@
     - name: Modify Server at CLC
       clc_modify_server:
         server_ids:
-            - UC1WFADJH22
+            - UC1WFAQTEST202
         cpu: 1
         memory: 4
         wait: True
