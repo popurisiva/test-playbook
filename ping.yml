@@ -1,5 +1,5 @@
 - hosts: all
-  connection: local
+  connection: ssh
   gather_facts: True
   tasks:
     - name: Print OS Name 
