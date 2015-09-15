@@ -2,7 +2,7 @@
 - name: modify clc server
   hosts: all
   gather_facts: False
-  connection: local
+  connection: ssh
   tasks:
     - name: Modify Server at CLC
       clc_modify_server:
