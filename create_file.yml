@@ -4,10 +4,10 @@
   gather_facts: False
   tasks:
     - name: Create a text file taco
-      file: src=/tmp/taco_test.txt
+      file: path=/tmp/taco_test.txt state=touch
       tags:
         - taco
     - name: Create a test file salad
-      file: src=/tmp/salad_test.txt
+      file: path=/tmp/salad_test.txt state=touch
       tags:
         - salad
