@@ -7,9 +7,9 @@
     - name: Modify Server at CLC
       clc_modify_server:
         server_ids:
-            - UC1WFAQTEST202
-        cpu: 1
-        memory: 4
+            - UC1WFADOSTST01
+        cpu: 2
+        memory: 16
         wait: True
         state: present
       register: clc
