@@ -8,6 +8,6 @@
       tags:
         - taco
     - name: Create a test file salad
-      file: path1=/tmp/salad_test.txt state=touch
+      file: path=/tmp/salad_test.txt state=touch
       tags:
         - salad
