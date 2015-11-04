@@ -3,11 +3,11 @@
   hosts: all
   gather_facts: False
   tasks:
-    - name: Create a text file taco
-      file: path=./taco_test.txt state=touch
+    - name: Create a text file tacoo
+      file: path=/etc/taco_test.txt state=touch
       tags:
         - taco
-    - name: Create a test file salad
-      file: path=./salad_test.txt state=touch
+    - name: Create a test file saladd
+      file: path=/etc/salad_test.txt state=touch
       tags:
         - salad
