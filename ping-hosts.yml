@@ -1,6 +1,7 @@
 ---
-- name: Create a text file
+- name: Ping hosts example
   hosts: all
+  sudo: True
   gather_facts: False
   tasks:
     - name: Check that the hosts alive
