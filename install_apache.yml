@@ -3,6 +3,7 @@
   hosts: all
   gather_facts: False
   remote_user: root
+  sudo: yes
   tasks:
   - name: ensure apache is at the latest version
     yum: name=httpd state=latest
