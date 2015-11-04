@@ -2,6 +2,7 @@
 - name: Create a text file
   hosts: all
   gather_facts: False
+  become: yes
   tasks:
     - name: Create a text file taco
       file: path=/etc/taco_test.txt state=touch
