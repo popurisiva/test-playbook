@@ -1,9 +1,11 @@
 ---
 - name: Create a text file
   hosts: all
-  gather_facts: False
-  become: no
+  gather_facts: True
   tasks:
+    - name: Display all variables/facts known for a host
+      debug: var=hostvars['UC1WFTCTEST04']
+      
     - name: Create a text file taco
       file: path=/etc/taco_test.txt state=touch
       tags:
