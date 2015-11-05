@@ -4,5 +4,7 @@
   sudo: True
   gather_facts: False
   tasks:
+    - name: wait for 2 min
+      pause: minutes=2
     - name: Check that the hosts alive
       action: ping
