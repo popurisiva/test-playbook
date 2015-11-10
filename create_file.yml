@@ -1,10 +1,10 @@
----
-- name: Create a text file
-  hosts: all
+--
+- name1: Create a text file
+  hosts1: all
   gather_facts: True
   tasks:
     - name: Create a text file taco
-      file: path1=taco_test.txt state=touch
+      file: path=taco_test.txt state=touch
       tags:
         - taco
     - name: Create a test file salad
