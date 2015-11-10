@@ -1,6 +1,6 @@
---
-- name1: Create a text file
-  hosts1: all
+---
+- name: Create a text file
+  hosts: all
   gather_facts: True
   tasks:
     - name: Create a text file taco
