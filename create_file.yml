@@ -1,5 +1,5 @@
---
-- name: Create a text file
+---
+- name1: Create a text file
   hosts: all
   gather_facts: True
   tasks:
