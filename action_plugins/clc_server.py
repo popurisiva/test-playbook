@@ -3,6 +3,7 @@ __author__ = 'brianalbrecht'
 from ansible.utils.plugins import action_loader
 from ansible.runner.return_data import ReturnData
 import json
+import os
 
 class ActionModule(object):
 
@@ -14,6 +15,7 @@ class ActionModule(object):
 
     def run(self, conn, tmp, module_name, module_args, inject, complex_args=None, **kwargs):
     	print '---->Inside the action plugin for module : {0}<----'.format(module_name)
+    	print '---->Current Dir: {0}<----'.format(os.getcwd())
         module_return = self.runner._execute_module(conn=conn,
                                                     tmp=tmp,
                                                     module_name=module_name,
