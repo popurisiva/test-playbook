@@ -1,6 +1,4 @@
 __author__ = 'brianalbrecht'
-import pydevd
-pydevd.settrace('localhost', port=5001, stdoutToServer=True, stderrToServer=True)
 
 from ansible.utils.plugins import action_loader
 from ansible.runner.return_data import ReturnData
