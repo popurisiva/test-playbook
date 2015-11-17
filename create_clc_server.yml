@@ -23,3 +23,9 @@
   tasks:
     - name: Check that the hosts alive
       action: ping
+      
+- name: Create a test file
+  hosts: all
+  tasks:
+    - name: Create a text file test
+      file: path=test.txt state=touch
