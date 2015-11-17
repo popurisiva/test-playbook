@@ -17,3 +17,9 @@
 
     - name: debug
       debug: var=clc.server_ids
+      
+- name: ping all hosts
+  hosts: all
+  tasks:
+    - name: Check that the hosts alive
+      action: ping
