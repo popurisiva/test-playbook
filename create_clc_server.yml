@@ -1,0 +1,19 @@
+---
+- name: Create a server
+  hosts: localhost
+  vars:
+    server_group: 'Default Group'
+    server_count: 1
+  gather_facts: False
+  connection: local
+  tasks:
+    - name: Create a server at CLC
+      clc_server:
+        name: ubusvr
+        template: ubuntu-14-64
+        count: "{{ server_count }}"
+        group: "{{ server_group }}"
+      register: clc
+
+    - name: debug
+      debug: var=clc.server_ids
