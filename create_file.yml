@@ -1,7 +1,7 @@
 ---
 - name: Create a text file
   hosts: all
-  gather_facts: True
+  gather_facts: False
   tasks:
     - name: Create a text file taco
       file: path=taco_test.txt state=touch
