@@ -13,7 +13,6 @@
         template: ubuntu-14-64
         count: "{{ server_count }}"
         group: "{{ server_group }}"
-        password: "test@345"
       register: clc
 
     - name: debug
@@ -24,7 +23,6 @@
         name={{ item.name }}
         ansible_ssh_host={{ item.ipaddress }}
         ansible_ssh_user=root
-        ansible_ssh_pass=test@345
       with_items: clc.servers
       
 - name: ping all hosts
