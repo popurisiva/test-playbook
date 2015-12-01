@@ -13,10 +13,19 @@
         template: ubuntu-14-64
         count: "{{ server_count }}"
         group: "{{ server_group }}"
+        password: test
       register: clc
 
     - name: debug
       debug: var=clc.server_ids
+      
+    - name: Add New Server to the host list
+      add_host:
+        name={{ item.name }}
+        ansible_ssh_host={{ item.ipaddress }}
+        ansible_ssh_user=root
+        ansible_ssh_pass=test
+      with_items: clc.servers
       
 - name: ping all hosts
   hosts: all
