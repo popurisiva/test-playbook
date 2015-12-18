@@ -8,7 +8,7 @@
   connection: local
   tasks:
     - name: Create a server at CLC
-      clc_server:
+      clc_server111:
         name: ubusvr
         template: ubuntu-14-64
         count: "{{ server_count }}"
