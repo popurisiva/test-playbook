@@ -3,7 +3,5 @@
   hosts: all
   gather_facts: False
   tasks:
-    - name: waiting...
-      pause: minutes=5
     - name: Check that the hosts alive
       action: ping
