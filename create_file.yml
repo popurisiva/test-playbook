@@ -1,7 +1,7 @@
 ---
 - name: Create a text file
   hosts: all
-  gather_facts: False
+  gather_facts: true
   vars:
     rnr_location: minion.default.TEST
   tasks:
