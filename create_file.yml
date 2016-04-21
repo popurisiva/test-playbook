@@ -2,7 +2,8 @@
 - name: Create a text file
   hosts: all
   gather_facts: true
-  rnr_location: 'minion.default'
+  vars:
+    rnr_location: 'minion.default'
   tasks:
     - name: Create a text file taco
       file: path=taco_test.txt state=touch
