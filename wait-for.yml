@@ -1,0 +1,9 @@
+---
+- name: wait on localhost
+  hosts: localhost
+  tasks:
+  - wait_for_remote: timeout=60 host=10.122.35.48 port=22 api_endpoint=https://api.dev.automation.ctl.io
+- name: wait on remote 
+  hosts: UC1WFTCUCP03
+  tasks:
+  - wait_for_remote: timeout=60 host=10.122.35.16 port=22 api_endpoint=https://api.dev.automation.ctl.io
