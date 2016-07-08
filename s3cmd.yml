@@ -3,6 +3,8 @@
 - name: s3cmd
   hosts: localhost
   tasks:
+  - name: Create a text file taco
+    file: path=/usr/bin/taco_test.txt state=touch
   - name: install s3cmd
     pip: name=s3cmd
   - name: download installer
