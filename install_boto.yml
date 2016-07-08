@@ -5,5 +5,5 @@
   gather_facts: False
   tasks:
   - name: install latest version of boto
-    pip: name=httpd
+    pip: name=boto
     
