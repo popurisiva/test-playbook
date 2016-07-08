@@ -1,0 +1,19 @@
+---
+# pull installer from  objectstore
+- name: s3cmd
+  hosts: localhost
+  tasks:
+  - name: download installer
+    shell: s3cmd get s3://installers/emc/ScaleIO_Linux_v2.0.zip >> download.scaleio
+    args:
+      chdir: /tmp/
+      creates: download.scaleio
+  - name: create dest dir
+    file: path=/tmp/installer.scaleio state=directory
+  - name: unpack installer
+    unarchive:
+      src: /tmp/ScaleIO_Linux_v2.0.zip
+      dest: /tmp/installer.scaleio
+      creates: /tmp/installer.scaleio/ScaleIO_2.0.0.1_Complete_Linux_SW_Download
+  - name: cleanup s3cfg
+    file: path=/root/.s3cfg state=absent
