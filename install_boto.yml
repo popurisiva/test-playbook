@@ -1,1 +1,9 @@
 
+---
+- name: Install Boto
+  hosts: all
+  gather_facts: False
+  tasks:
+  - name: install latest version of boto
+    pip: name=httpd
+    
