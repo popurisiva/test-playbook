@@ -3,6 +3,8 @@
 - name: s3cmd
   hosts: localhost
   tasks:
+  - name: install s3cmd
+    pip: name=s3cmd
   - name: download installer
     shell: s3cmd get s3://installers/emc/ScaleIO_Linux_v2.0.zip >> download.scaleio
     args:
