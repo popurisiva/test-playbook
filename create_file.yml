@@ -2,6 +2,10 @@
 - name: Create a text file
   hosts: all
   gather_facts: true
+  vars:
+    http_port: 80
+    variable1: value1
+    variable2: value2
   tasks:
     - name: Create a text file taco
       file: path=taco_test.txt state=touch
