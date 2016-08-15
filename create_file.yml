@@ -12,14 +12,14 @@
       tags:
         - taco
         
+    - name: display property
+      debug: var={{ property2 }}
+      
     - name: display job_id
       debug: var={{ rnr_job_id }}
       
     - name: display execution_id
       debug: var={{ rnr_execution_id }}
-      
-    - name: display property
-      debug: var={{ property2 }}
       
     - name: Create a test file salad
       file: path=salad_test.txt state=touch
