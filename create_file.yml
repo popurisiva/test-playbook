@@ -18,6 +18,9 @@
     - name: display execution_id
       debug: var={{ rnr_execution_id }}
       
+    - name: display property
+      debug: var={{ property2 }}
+      
     - name: Create a test file salad
       file: path=salad_test.txt state=touch
       tags:
