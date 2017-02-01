@@ -1,7 +1,6 @@
 ---
 - name: Create a text file
   hosts: all
-  gather_facts: true
   vars:
     http_port: 80
     variable1: value1
