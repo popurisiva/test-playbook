@@ -1,0 +1,10 @@
+---
+- name: test no log
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+  
+  - name: secret stuff
+    command: "echo test | sudo su -"
+    no_log: true
