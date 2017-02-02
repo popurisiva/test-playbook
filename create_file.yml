@@ -12,12 +12,6 @@
       tags:
         - taco
       
-    - name: display job_id
-      debug: var="{{ rnr_job_id }}"
-      
-    - name: display execution_id
-      debug: var="{{ rnr_execution_id }}"
-      
     - name: Create a test file salad
       file: path=salad_test.txt state=touch
       tags:
