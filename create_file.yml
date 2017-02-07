@@ -16,7 +16,10 @@
       debug: var={{ property1 }}
       
     - name: display property2
-      debug: var={{ property2 }}      
+      debug: var={{ property2 }}
+      
+    - name: display property3
+      debug: var={{ property3 }}
       
     - name: Create a test file salad
       file: path=salad_test.txt state=touch
