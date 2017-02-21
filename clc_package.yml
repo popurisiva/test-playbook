@@ -8,7 +8,7 @@
     variable2: value2
     
   tasks:
-    - name: Create a text file taco
+    - name: install a package.
       clc_blueprint_package:
         server_ids: 
             - UC1WFTCETCD24
