@@ -2,6 +2,7 @@
 
 - name: install python and clc sdk
   clc_blueprint_package:
-    server_ids: ['UC1WFTCETCD24']
+    server_ids: 
+        - UC1WFTCETCD24
     package_id: 3dfc3fa7-a81b-475f-83a0-f586634e36cc
     package_params: {}
