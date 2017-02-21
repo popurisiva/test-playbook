@@ -8,11 +8,26 @@
     variable2: value2
     
   tasks:
-    - name: install a package.
+    - name: 'package: linux update'
       clc_blueprint_package:
         server_ids: 
-            - UC1WFTCETCD24
-        package_id: 3dfc3fa7-a81b-475f-83a0-f586634e36cc
+          - UC1WFTCETCD24
+        package_id: 77ab3844-579d-4c8d-8955-c69a94a2ba1a
         package_params: {}
+    - name: 'package: bitnami'
+      with_flattened: groups['servers']
+      clc_blueprint_package:
+        server_ids: 
+          - UC1WFTCETCD24
+        package_id: bd161004-7ff0-4c56-8e5e-6f3e49b81b7b
+        package_params:
+          T3.bitnami.apache_server_port: 8089
+          T3.bitnami.apache_server_ssl_port: 8090
+          T3.bitnami.web_server_domain: test
+          T3.bitnami.mysql_port: 8733
+          T3.bitnami.base_user: admin
+          T3.bitnami.base_user_name: admin
+          T3.bitnami.base_mail: admin@admin.com
+          T3.bitnami.base_password: test@123456
 
   
